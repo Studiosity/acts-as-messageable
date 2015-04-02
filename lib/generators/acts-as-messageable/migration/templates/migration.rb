@@ -8,14 +8,15 @@ class CreateMessagesTable < ActiveRecord::Migration
       t.boolean :opened, :default => false
       t.boolean :recipient_delete, :default => false
       t.boolean :sender_delete, :default => false
-      t.timestamps
 
-      # ancestry
-      t.string :ancestry
+      #closure_tree
+      t.integer :parent_id, :null => true, :index => true
+
+      t.timestamps
     end
 
-    add_index :<%= table_name %>, [:sent_messageable_id, :received_messageable_id], :name => "acts_as_messageable_ids"
-    add_index :<%= table_name %>, :ancestry
+    add_index :<%= table_name %>,  :received_messageable_id, :name => "acts_as_messageable_received_messageable_id"
+    add_index :<%= table_name %>, :sent_messageable_id, :name => "acts_as_messageable_sent_messageable_id"
   end
 
   def self.down

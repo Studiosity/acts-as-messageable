@@ -33,7 +33,6 @@ module ActsAsMessageable
                   :dependent => options[:dependent]
 
         self.messages_class_name = options[:class_name].constantize
-        self.messages_class_name.has_ancestry
 
         if self.messages_class_name.respond_to?(:table_name=)
           self.messages_class_name.table_name = options[:table_name]
@@ -42,6 +41,8 @@ module ActsAsMessageable
           self.messages_class_name.set_table_name(options[:table_name])
           ActiveSupport::Deprecation.warn("Calling set_table_name is deprecated. Please use `self.table_name = 'the_name'` instead.")
         end
+        # self.messages_class_name.has_closure_tree(hierarchy_table_name: "#{options[:table_name].singularize}_hierarchies")
+        self.messages_class_name.has_closure_tree
 
         self.messages_class_name.required = Array.wrap(options[:required])
         self.messages_class_name.validates_presence_of self.messages_class_name.required

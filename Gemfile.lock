@@ -24,14 +24,15 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
-    ancestry (2.1.0)
-      activerecord (>= 3.0.0)
     appraisal (1.0.2)
       bundler
       rake
       thor (>= 0.14.0)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
+    closure_tree (5.2.0)
+      activerecord (>= 3.2.0)
+      with_advisory_lock (>= 3.0.0)
     coveralls (0.7.1)
       multi_json (~> 1.3)
       rest-client
@@ -114,6 +115,9 @@ GEM
     tins (1.3.3)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    with_advisory_lock (3.0.0)
+      activerecord (>= 3.2)
+      thread_safe
 
 PLATFORMS
   ruby
@@ -121,8 +125,8 @@ PLATFORMS
 DEPENDENCIES
   activerecord (>= 3.0.0)
   activesupport (>= 3.0.0)
-  ancestry (>= 1.3.0)
   appraisal
+  closure_tree
   coveralls
   jeweler (~> 1.8.0)
   railties (>= 3.0.0)

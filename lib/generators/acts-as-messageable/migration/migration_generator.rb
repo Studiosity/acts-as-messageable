@@ -19,6 +19,8 @@ module ActsAsMessageable
       migration_template 'migration_permanent.rb',
         'db/migrate/add_recipient_permanent_delete_and_sender_permanent_delete_to_messages.rb' rescue nil
       migration_template 'migration_opened_as_datetime.rb', 'db/migrate/add_opened_at_to_messages.rb' rescue nil
+      generate "closure_tree:migration", table_name.singularize
+
     end
   end
 end
