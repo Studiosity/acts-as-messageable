@@ -11,7 +11,7 @@ module ActsAsMessageable
     end
 
     def conversations
-      map { |r| r.root.subtree.order("id desc").first }.uniq
+      map { |r| r.root.self_and_descendants.order("id desc").first }.uniq
     end
   end
 end

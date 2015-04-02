@@ -44,7 +44,7 @@ module ActsAsMessageable
     end
 
     def conversation
-      root.subtree
+      root.self_and_descendants
     end
 
     def delete
