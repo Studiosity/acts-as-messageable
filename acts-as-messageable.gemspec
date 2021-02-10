@@ -64,7 +64,7 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<activerecord>, [">= 3.0.0"])
       s.add_runtime_dependency(%q<activesupport>, [">= 3.0.0"])
-      s.add_runtime_dependency(%q<ancestry>, [">= 1.3.0"])
+      s.add_runtime_dependency(%q<closure_tree>, [">= 7.0.0"])
       s.add_runtime_dependency(%q<railties>, [">= 3.0.0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.0"])
@@ -74,7 +74,7 @@ Gem::Specification.new do |s|
     else
       s.add_dependency(%q<activerecord>, [">= 3.0.0"])
       s.add_dependency(%q<activesupport>, [">= 3.0.0"])
-      s.add_dependency(%q<ancestry>, [">= 1.3.0"])
+      s.add_dependency(%q<closure_tree>, [">= 7.0.0"])
       s.add_dependency(%q<railties>, [">= 3.0.0"])
       s.add_dependency(%q<rspec>, ["~> 2.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.0"])
@@ -85,7 +85,7 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<activerecord>, [">= 3.0.0"])
     s.add_dependency(%q<activesupport>, [">= 3.0.0"])
-    s.add_dependency(%q<ancestry>, [">= 1.3.0"])
+    s.add_dependency(%q<closure_tree>, [">= 7.0.0"])
     s.add_dependency(%q<railties>, [">= 3.0.0"])
     s.add_dependency(%q<rspec>, ["~> 2.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.0"])
