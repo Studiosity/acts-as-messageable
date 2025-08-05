@@ -2,6 +2,8 @@ require 'closure_tree'
 
 module ActsAsMessageable
   class Message < ::ActiveRecord::Base
+    self.abstract_class = true
+    
     include ActsAsMessageable::Scopes
 
     belongs_to :received_messageable, :polymorphic => true
